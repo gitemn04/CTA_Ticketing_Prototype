@@ -50,7 +50,8 @@ def prompt_passengers() -> dict[str, int]:
 
 
 def format_money(cents: int) -> str:
-    return f"{cents / 100:.2f}"
+    """Display integer cents with a unit label and thousands separators."""
+    return f"{cents:,} cents"
 
 
 def display_voucher(
