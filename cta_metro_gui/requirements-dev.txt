@@ -1,0 +1,10 @@
+# Tools for testing and checking CTA Metro (not needed to run the app). Versions used for this release.
+#   python -m pip install -r requirements.lock -r requirements-dev.txt
+pypdf==5.9.0                    # PDF content tests (11 tests are skipped without it)
+coverage==7.6.9                 # python -m coverage run -m unittest discover -s tests
+ruff==0.8.4                     # python -m ruff check .
+mypy==1.13.0                    # python -m mypy            (non-GUI modules, see pyproject.toml)
+bandit==1.8.0                   # python -m bandit -c pyproject.toml -r .
+pip-audit==2.7.3                # python -m pip_audit -r requirements.lock
+# Optional, large: opencv-python-headless==4.13.0.92 lets one test decode the QR code printed in the PDF
+zxing-cpp>=2.2              # QR decoding in tests (the ZXing engine many phone scanner apps use)

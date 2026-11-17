@@ -1,0 +1,30 @@
+{
+  "environment": "production",
+  "routing": {
+    "provider": "schematic",
+    "google_api_key": "",
+    "station_geo_file": "stations_geo.json",
+    "travel_mode": "TRANSIT"
+  },
+  "sms": {
+    "provider": "twilio_verify",
+    "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "auth_token": "your_auth_token_here",
+    "service_sid": "VAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "channel": "sms"
+  },
+  "payments": {
+    "provider": "",
+    "currency": "SAR"
+  },
+  "ticket_server": {
+    "url": "",
+    "notes": [
+      "Set 'url' to the public HTTPS base URL where cta_ticket_server.py is running.",
+      "Example: https://your-domain.com   (no trailing slash)",
+      "Leave blank to use the signed-token QR (staff scanner only, no phone camera link).",
+      "A localhost URL will NOT work from a phone camera.",
+      "See DEPLOYMENT.md for tunnelling and hosting options."
+    ]
+  }
+}

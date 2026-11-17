@@ -1,0 +1,9 @@
+# Runtime dependencies of CTA Metro v3.0, with the version ranges this release was tested against.
+# Exact, hash-checked versions: requirements.lock  (python -m pip install --require-hashes -r requirements.lock)
+reportlab>=4.4.10,<5
+qrcode>=8.2,<9
+pillow>=13.0.0,<14         # 13.0.0: fixes 55 published advisories in 12.1.1 (pip-audit, this release)
+
+# v3.0 additions
+flask>=3.0,<4              # ticket access server (cta_ticket_server.py) — optional for the desktop app
+                           # Required to run:  python cta_ticket_server.py
