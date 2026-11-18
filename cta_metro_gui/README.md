@@ -51,17 +51,24 @@ existing rule charges by zone numbers, so it charges **1 zone (2,105 cents for o
 through 3 different zones. `tests/test_zone_booking.py::StationPlannerRegressionTests` records this behaviour so any change
 to it is a deliberate decision (see `docs/FARE_POLICY.md`). The zone booking is unaffected: it never sees a route.
 
-### Run it on Windows
+### Run it on Windows (PowerShell)
+
+From the cloned `CTA_Ticketing_Prototype` repository folder, run:
+
+```powershell
+Set-Location .\cta_metro_gui
+$ctaVenv = Join-Path $env:TEMP ("cta-" + [guid]::NewGuid())
+python -m venv $ctaVenv
+$ctaPython = Join-Path $ctaVenv 'Scripts\python.exe'
+& $ctaPython -m pip install -r .\requirements.txt
+& $ctaPython .\cta_app.py
 ```
-cd "%USERPROFILE%\Downloads\CTA_Metro_App_v3_3\CTA_Metro_App_v3"
-python -m pip install -r requirements.txt
-python cta_app.py
-```
-(PowerShell: the same commands; or double-click `launch.bat`.) The zone ticket, station board and voucher work straight
-away. The **optional station planner** needs routing switched on: copy your existing `cta_config.json` from your old
-folder into this folder, or run `copy cta_config.example.json cta_config.json` and keep `"routing": {"provider":
-"schematic"}`. Without it the planner says "Journey planning is not configured" (unchanged behaviour) and a red badge
-appears in the header; the zone ticket still works.
+
+The virtual environment is created outside the repository. Wait for the dependencies to install successfully before launching the app. PowerShell returns to its prompt after you close CTA Metro.
+
+If the app shows **Journey planning is not configured**, click **OK** to use Zone Ticket. The optional station-to-station planner requires a local `cta_config.json` with a routing provider configured.
+
+**Windows smoke test (18 November 2026):** CTA Metro opened with Python 3.13.14 in a fresh virtual environment. With journey planning unconfigured, selecting Central to Downtown and adding one adult showed **6,315 cents** for three chargeable zones.
 
 Tests for this part (from the same folder):
 ```
