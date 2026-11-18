@@ -2,3 +2,15 @@ __pycache__/
 *.py[cod]
 .venv/
 
+
+# CTA GUI local configuration and runtime data
+/cta_metro_gui/cta_config.json
+/cta_metro_gui/.env
+/cta_metro_gui/.env.*
+!/cta_metro_gui/.env.example
+/cta_metro_gui/cta.db*
+/cta_metro_gui/history.json
+/cta_metro_gui/accounts.json
+/cta_metro_gui/staff.json
+/cta_metro_gui/payments_ledger.json
+/cta_metro_gui/payment_events.jsonl
