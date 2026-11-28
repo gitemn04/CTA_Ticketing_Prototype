@@ -1,0 +1,44 @@
+test_central_to_downtown_family (test_zone_booking.AssignmentExampleTests.test_central_to_downtown_family) ... ok
+test_central_to_midtown_one_adult (test_zone_booking.AssignmentExampleTests.test_central_to_midtown_one_adult) ... ok
+test_midtown_to_midtown_one_child (test_zone_booking.AssignmentExampleTests.test_midtown_to_midtown_one_child) ... ok
+test_reverse_direction_costs_the_same (test_zone_booking.AssignmentExampleTests.test_reverse_direction_costs_the_same) ... ok
+test_board_has_all_36_stations_grouped_by_zone_and_sorted_a_to_z (test_zone_booking.StationBoardTests.test_board_has_all_36_stations_grouped_by_zone_and_sorted_a_to_z) ... ok
+test_exact_board_contents (test_zone_booking.StationBoardTests.test_exact_board_contents) ... ok
+test_network_keeps_36_stations_and_35_connections (test_zone_booking.StationBoardTests.test_network_keeps_36_stations_and_35_connections) ... ok
+test_wicyt_is_in_midtown (test_zone_booking.StationBoardTests.test_wicyt_is_in_midtown) ... ok
+test_own_edge_case_zord_to_marend_is_kept_separate (test_zone_booking.StationPlannerRegressionTests.test_own_edge_case_zord_to_marend_is_kept_separate)
+Owner's edge case for the STATION planner (not an assignment example): both stations are Downtown, but the ... ok
+test_station_planner_quotes_still_work (test_zone_booking.StationPlannerRegressionTests.test_station_planner_quotes_still_work) ... ok
+test_after_correcting_the_input_the_booking_proceeds (test_zone_booking.ValidationTests.test_after_correcting_the_input_the_booking_proceeds) ... ok
+test_all_zero_group_is_refused_with_a_clear_message (test_zone_booking.ValidationTests.test_all_zero_group_is_refused_with_a_clear_message) ... ok
+test_bad_counts_are_refused (test_zone_booking.ValidationTests.test_bad_counts_are_refused) ... ok
+test_missing_zones_are_refused (test_zone_booking.ValidationTests.test_missing_zones_are_refused) ... ok
+test_spaces_around_a_number_are_accepted (test_zone_booking.ValidationTests.test_spaces_around_a_number_are_accepted) ... ok
+test_pdf_agrees_with_the_voucher_and_is_not_a4 (test_zone_booking.VoucherPdfTests.test_pdf_agrees_with_the_voucher_and_is_not_a4) ... ok
+test_log_entry_holds_zones_and_counts_only (test_zone_booking.VoucherTests.test_log_entry_holds_zones_and_counts_only) ... ok
+test_subtotal_is_count_times_rate_times_zones (test_zone_booking.VoucherTests.test_subtotal_is_count_times_rate_times_zones) ... ok
+test_voucher_lists_all_four_categories_including_zero_counts (test_zone_booking.VoucherTests.test_voucher_lists_all_four_categories_including_zero_counts) ... ok
+test_voucher_number_is_unique_and_dated (test_zone_booking.VoucherTests.test_voucher_number_is_unique_and_dated) ... ok
+test_voucher_text_has_every_required_field (test_zone_booking.VoucherTests.test_voucher_text_has_every_required_field) ... ok
+test_all_zero_group_is_refused_then_corrected (test_zone_booking.ZoneGuiTests.test_all_zero_group_is_refused_then_corrected) ... ok
+test_every_page_opens (test_zone_booking.ZoneGuiTests.test_every_page_opens) ... ok
+test_exit_closes_the_app (test_zone_booking.ZoneGuiTests.test_exit_closes_the_app) ... ok
+test_issue_another_voucher_resets_the_form (test_zone_booking.ZoneGuiTests.test_issue_another_voucher_resets_the_form) ... ok
+test_issued_voucher_screen_shows_every_field_and_matches_the_pdf (test_zone_booking.ZoneGuiTests.test_issued_voucher_screen_shows_every_field_and_matches_the_pdf) ... ok
+test_missing_zone_is_refused_without_a_voucher_then_corrected (test_zone_booking.ZoneGuiTests.test_missing_zone_is_refused_without_a_voucher_then_corrected) ... ok
+test_plus_and_minus_buttons_change_the_counts (test_zone_booking.ZoneGuiTests.test_plus_and_minus_buttons_change_the_counts) ... ok
+test_station_board_page_shows_all_stations_grouped_and_sorted (test_zone_booking.ZoneGuiTests.test_station_board_page_shows_all_stations_grouped_and_sorted) ... ok
+test_station_planner_still_works_in_the_app (test_zone_booking.ZoneGuiTests.test_station_planner_still_works_in_the_app) ... ok
+test_voucher_page_cannot_open_without_a_voucher (test_zone_booking.ZoneGuiTests.test_voucher_page_cannot_open_without_a_voucher) ... ok
+test_zero_categories_are_shown_on_the_voucher (test_zone_booking.ZoneGuiTests.test_zero_categories_are_shown_on_the_voucher) ... ok
+test_zone_booking_works_even_when_journey_planning_is_not_configured (test_zone_booking.ZoneGuiTests.test_zone_booking_works_even_when_journey_planning_is_not_configured)
+A fresh copy without cta_config.json: the station planner reports 'not configured', the zone flow still works ... ok
+test_zone_ticket_is_the_home_page_and_first_in_the_menu (test_zone_booking.ZoneGuiTests.test_zone_ticket_is_the_home_page_and_first_in_the_menu) ... ok
+test_chargeable_zones_for_all_nine_pairs (test_zone_booking.ZoneRuleTests.test_chargeable_zones_for_all_nine_pairs) ... ok
+test_rates_are_the_assignment_rates_in_cents (test_zone_booking.ZoneRuleTests.test_rates_are_the_assignment_rates_in_cents) ... ok
+test_same_start_and_destination_zone_is_allowed (test_zone_booking.ZoneRuleTests.test_same_start_and_destination_zone_is_allowed) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 8.779s
+
+OK

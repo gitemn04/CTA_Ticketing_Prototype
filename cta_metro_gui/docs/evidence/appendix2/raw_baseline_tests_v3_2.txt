@@ -1,0 +1,61 @@
+=== tests/test_all.py
+........................................................................ [ 47%]
+........................................................................ [ 95%]
+.......                                                                  [100%]
+151 passed in 17.83s
+=== tests/test_auth.py
+.............. [ 42%]
+...................                                                      [100%]
+33 passed, 58 subtests passed in 3.80s
+=== tests/test_complaints_and_ui.py
+.........                                                                [100%]
+9 passed in 8.00s
+=== tests/test_fares.py
+.........................                                                [100%]
+25 passed in 2.58s
+=== tests/test_fixes.py
+...........................                                              [100%]
+27 passed in 1.68s
+=== tests/test_integration.py
+.............                                                            [100%]
+13 passed in 1.83s
+=== tests/test_pdf_and_sms_verification.py
+..................................................                       [100%]
+50 passed in 10.52s
+=== tests/test_round2.py
+...............................                                          [100%]
+31 passed in 2.84s
+=== tests/test_routing.py
+......................                                                   [100%]
+22 passed in 2.42s
+=== tests/test_startup_path.py
+............                                                             [100%]
+12 passed in 5.28s
+=== tests/test_support.py
+............................s...........                              [100%]
+39 passed, 1 skipped, 3 subtests passed in 4.44s
+=== tests/test_tickets.py
+........................................................................ [ 93%]
+.....                                                                    [100%]
+=============================== warnings summary ===============================
+tests/test_tickets.py::test_key
+  /usr/local/lib/python3.12/dist-packages/_pytest/python.py:191: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_tickets.py::test_key returned <class 'bytes'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+77 passed, 1 warning in 9.94s
+=== tests/test_v3.py
+..............................................                           [100%]
+46 passed in 0.30s
+=== tests/test_v3_bug_verification.py
+..........................................................               [100%]
+58 passed in 14.53s
+=== tests/test_v3_integration.py
+..............................                                           [100%]
+30 passed in 0.81s
+=== tests/test_validation.py
+.......................                                                  [100%]
+23 passed in 2.41s
+DONE

@@ -1,0 +1,23 @@
+home page = zone; menu = ['Zone ticket', 'Station board', 'Plan trip', 'Network map', 'My ticket', 'Help']
+  screenshot: 01_zone_home_empty.png
+board counts = {'Central': 10, 'Midtown': 12, 'Downtown': 14}
+  screenshot: 02_station_board.png
+missing start zone -> voucher=None, page=zone, message="Choose a start zone."
+  screenshot: 03_refused_missing_zone.png
+all-zero group -> voucher=None, page=zone, message="Enter at least one traveller: all four counts are 0."
+  screenshot: 04_refused_all_zero.png
+  screenshot: 05_corrected_central_to_downtown.png
+Central->Downtown 2/1/1/1 -> zones=3, Total travellers: 5, Total fare: 25,185 cents, subtotals=['12,630 cents', '4,230 cents', '3,075 cents', '5,250 cents']
+  screenshot: 06_voucher_central_to_downtown.png
+print -> Print copy created: ZV-20261105-135210-E80F.pdf
+  screenshot: 07_voucher_central_to_downtown_PDF.png  (page (540.0, 288.0) pt)
+Issue another -> page=zone, zones=(None, None), counts={'Adult': '0', 'Child': '0', 'Senior': '0', 'Student': '0'}
+  screenshot: 08_after_issue_another_fresh_form.png
+Midtown->Midtown 1 child -> zones=1, Total fare: 1,410 cents
+  screenshot: 09_voucher_midtown_to_midtown.png
+Central->Midtown 1 adult -> zones=2, Total fare: 4,210 cents
+  screenshot: 10_voucher_central_to_midtown.png
+Station planner Centrala->Quthiel 1 adult -> route ends Quthiel, bar "4,210 cents"
+  screenshot: 11_station_planner_still_works.png
+  screenshot: 12_voucher_before_exit.png
+Exit -> window closed, mainloop ended normally
